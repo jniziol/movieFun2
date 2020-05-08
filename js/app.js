@@ -16,6 +16,9 @@ fetch(`https://api.themoviedb.org/3/trending/movie/week?api_key=${apiKey}`)
 function buildMovieGenreObject(movies, genres) {
   movieGenres = {}
 
+
+  
+
   genres.forEach(genre => {
     movies.forEach(function(movie) {
       if (movie.genre_ids.includes(genre.id)) {
